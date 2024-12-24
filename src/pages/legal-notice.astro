@@ -1,0 +1,29 @@
+---
+import { HeroSlider1 } from "@static/images";
+import Layout from "../layouts/Layout.astro";
+import { LegalNotice as LegalNoticeModule } from "@modules/LegalNotice";
+import { Hero } from "@modules/Hero";
+import { Footer } from "@modules/Footer";
+---
+
+<Layout
+    title="株式会社プロドウガ 特定商取引法に基づく表示"
+    description="株式会社プロドウガの特定商取引法に基づく表示に関する情報"
+>
+    <main class="page-content">
+        <Hero
+            heroType="ParallaxImage"
+            client:load
+            data={{
+                image: HeroSlider1.src,
+                content: {
+                    title: "特商法表示",
+                    paragraph:
+                        "当社は、特定商取引法に基づく全ての要件を遵守しています。",
+                },
+            }}
+        />
+        <LegalNoticeModule client:load />
+    </main>
+    <Footer />
+</Layout>

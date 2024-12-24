@@ -1,0 +1,29 @@
+---
+import { HeroSlider1 } from "@static/images";
+import Layout from "../layouts/Layout.astro";
+import { Ir as IrModule } from "@modules/Ir";
+import { Hero } from "@modules/Hero";
+import { Footer } from "@modules/Footer";
+---
+
+<Layout
+        title="株式会社プロドウガ 電子公告"
+        description="株式会社プロドウガの電子公告情報"
+>
+    <main class="page-content">
+        <Hero
+            heroType="ParallaxImage"
+            client:load
+            data={{
+                image: HeroSlider1.src,
+                content: {
+                    title: "電子公告",
+                    paragraph:
+                        "当社は、定款に定めましたとおり、公告方法を電子公告としております。",
+                },
+            }}
+        />
+        <IrModule client:load />
+    </main>
+    <Footer />
+</Layout>

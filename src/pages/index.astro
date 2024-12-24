@@ -1,0 +1,49 @@
+---
+import { HeroSlider1, HeroSlider2, HeroSlider3 } from "@static/images";
+import Layout from "../layouts/Layout.astro";
+import { Hero } from "@modules/Hero";
+---
+
+<Layout
+    title="株式会社プロドウガ | クリエイティブとテクノロジーで、お客様の可能性を開く"
+    description="デザイン、マーケティング、開発の全てを一貫して提供する株式会社プロドウガ。クリエイティブな発想と最先端のウェブ技術を融合し、お客様のビジネスに最適なソリューションをご提案します。"
+>
+    <main class="page-content">
+        <Hero
+            client:load
+            heroType="fullPageSlider"
+            data={[
+                {
+                    subtitle: "ブランドを引き立てる、洗練されたデザイン",
+                    title: "CREATIVE",
+                    background: HeroSlider1.src,
+                    paragraph: "デザイン性と独創性に優れたクリエイティブ",
+                    button: {
+                        text: "ABOUT US",
+                        link: "/about",
+                    },
+                },
+                {
+                    subtitle: "高機能と優れたユーザビリティ、最新のウェブ技術",
+                    title: "TECHNOLOGY",
+                    background: HeroSlider2.src,
+                    paragraph: "デザイン・マーケティング・開発の全てを一貫して提供",
+                    button: {
+                        text: "SERVICE",
+                        link: "/service",
+                    },
+                },
+                {
+                    subtitle: "お客様の課題を解決する、トータルサポート",
+                    title: "SOLUTION",
+                    background: HeroSlider3.src,
+                    paragraph: "企業ニーズに合わせて、最適なソリューションを提案",
+                    button: {
+                        text: "CONTACT",
+                        link: "/contact",
+                    },
+                },
+            ]}
+        />
+    </main>
+</Layout>

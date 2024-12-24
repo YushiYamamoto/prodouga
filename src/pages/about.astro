@@ -1,0 +1,97 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Hero } from "@modules/Hero";
+import { HeroSlider1, InfiniteImg1, InfiniteImg2, InfiniteImg3 } from "@static/images";
+import { ServiceCards } from "@modules/ServiceCards";
+import { Footer } from "@modules/Footer";
+---
+
+<Layout
+    title="クリエイティブとテクノロジーで、お客様の可能性を開く | 株式会社プロドウガ"
+    description="内容"
+>
+    <main class="page-content">
+        <Hero
+            heroType="ParallaxImage"
+            client:visible
+            data={{
+                image: HeroSlider1.src,
+                content: {
+                    title: "ABOUT US",
+                    paragraph:
+                        "未来を形に",
+                },
+            }}
+        />
+        <ServiceCards
+            description="Strengths of Our Company"
+            title="当社の強み"
+            client:visible
+            cards={[
+                {
+                    title: "Innovation",
+                    description:
+                        "ユーザーエクスペリエンス",
+                },
+                {
+                    title: "Strategy",
+                    description:
+                        "戦略的マーケティング",
+                },
+                {
+                    title: "Quality",
+                    description:
+                        "先進技術を駆使した開発",
+                },
+            ]}
+        />
+
+        <Hero
+            heroType="textImage"
+            client:visible
+            data={{
+                image: {
+                    src: InfiniteImg1.src,
+                    width: 590,
+                    height: 300,
+                    alt: "Hero Image",
+                },
+                title: "革新的",
+                paragraph:
+                    "当社は、洗練されたデザインと最先端の技術を組み合わせることで、ユーザーエクスペリエンスを重視した革新的なウェブサイトやアプリケーションを提供しています。お客様のブランド個性を際立たせるデザインを通じて、ビジネスの魅力を最大限に引き出します。",
+            }}
+        />
+        <Hero
+            heroType="textImage"
+            client:visible
+            data={{
+                switchPlaces: true,
+                image: {
+                    src: InfiniteImg2.src,
+                    width: 590,
+                    height: 300,
+                    alt: "Hero Image",
+                },
+                title: "戦略的",
+                paragraph:
+                    "マーケティングチームは、各ビジネスのニーズを深く理解し、課題を解決するための戦略的なプランを立案します。ターゲット市場に対する洞察を基にした効果的なキャンペーンを展開し、お客様のビジネス成長を加速させるサポートを行います。",
+            }}
+        />
+        <Hero
+        heroType="textImage"
+        client:visible
+        data={{
+            image: {
+                src: InfiniteImg3.src,
+                width: 590,
+                height: 300,
+                alt: "Hero Image",
+            },
+            title: "高品質",
+            paragraph:
+                "当社の開発チームは、最新の技術トレンドに常に敏感であり、高品質なソリューションの提供を目指しています。顧客の期待を超えるパフォーマンスと安全性を確保し、ビジネスの可能性を最大限に引き出します。最先端技術の活用により、お客様のビジネスを支援することが私たちの強みです。",
+        }}
+    />
+    </main>
+    <Footer />
+</Layout>

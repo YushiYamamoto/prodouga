@@ -1,0 +1,42 @@
+---
+import { ContentSection } from "@modules/ContentSection";
+import Layout from "../layouts/Layout.astro";
+import { FadeIn } from "@utils/animations/FadeIn";
+import { Button } from "@components/Button";
+---
+
+<Layout
+title="404 | ページが見つかりません"
+description="お探しのページは削除されたか、名前が変更されたか、一時的に利用できなくなっている可能性があります。"
+>
+    <main class="page-content page-404">
+        <ContentSection
+            style={{
+                maxWidth: "600px",
+                margin: "0 auto",
+                textAlign: "center",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100%",
+            }}
+        >
+            <FadeIn client:visible>
+                <h1>ページが見つかりません</h1>
+                <p>
+                    お探しのページは削除されたか、名称が変更されたか、一時的に利用できない可能性があります。
+                </p>
+
+                <Button
+                    variant="secondary"
+                    showIcon={false}
+                    link="/"
+                    align="center"
+                >
+                ホームに戻る
+                </Button>
+            </FadeIn>
+        </ContentSection>
+    </main>
+</Layout>

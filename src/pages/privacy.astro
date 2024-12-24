@@ -1,0 +1,29 @@
+---
+import { HeroSlider1 } from "@static/images";
+import Layout from "../layouts/Layout.astro";
+import { Privacy as PrivacyModule } from "@modules/Privacy";
+import { Hero } from "@modules/Hero";
+import { Footer } from "@modules/Footer";
+---
+
+<Layout
+    title="株式会社プロドウガ プライバシーポリシー"
+    description="株式会社プロドウガのプライバシーポリシーに関する情報"
+>
+    <main class="page-content">
+        <Hero
+            heroType="ParallaxImage"
+            client:load
+            data={{
+                image: HeroSlider1.src,
+                content: {
+                    title: "プライバシーポリシー",
+                    paragraph:
+                        "当社は、プライバシー保護のために最高水準の対策を講じています。",
+                },
+            }}
+        />
+        <PrivacyModule client:load />
+    </main>
+    <Footer />
+</Layout>

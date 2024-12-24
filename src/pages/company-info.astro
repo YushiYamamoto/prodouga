@@ -1,0 +1,29 @@
+---
+import { HeroSlider1 } from "@static/images";
+import Layout from "../layouts/Layout.astro";
+import { CompanyInfo as CompanyInfoModule } from "@modules/CompanyInfo";
+import { Hero } from "@modules/Hero";
+import { Footer } from "@modules/Footer";
+---
+
+<Layout
+    title="株式会社プロドウガ 会社案内"
+    description="株式会社プロドウガの会社案内に関する情報"
+>
+    <main class="page-content">
+        <Hero
+            heroType="ParallaxImage"
+            client:load
+            data={{
+                image: HeroSlider1.src,
+                content: {
+                    title: "会社案内",
+                    paragraph:
+                        "株式会社プロドウガの会社案内をご覧ください。",
+                },
+            }}
+        />
+        <CompanyInfoModule client:load />
+    </main>
+    <Footer />
+</Layout>

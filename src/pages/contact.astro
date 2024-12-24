@@ -1,0 +1,29 @@
+---
+import { HeroSlider3 } from "@static/images";
+import Layout from "../layouts/Layout.astro";
+import { Contact as ContactModule } from "@modules/Contact";
+import { Hero } from "@modules/Hero";
+import { Footer } from "@modules/Footer";
+---
+
+<Layout
+    title="お問い合わせ"
+    description="株式会社プロドウガのお問い合わせフォーム"
+>
+    <main class="page-content">
+        <Hero
+            heroType="ParallaxImage"
+            client:load
+            data={{
+                image: HeroSlider3.src,
+                content: {
+                    title: "CONTACT",
+                    paragraph:
+                        "ご相談内容をお聞かせください。",
+                },
+            }}
+        />
+        <ContactModule client:load />
+    </main>
+    <Footer />
+</Layout>
