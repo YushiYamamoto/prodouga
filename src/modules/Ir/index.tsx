@@ -13,7 +13,7 @@ export const Ir: FC = () => {
                             variant="background-text"
                             bgText="Address"
                             boxAsLink={true}
-                            href="./pdf/2022.pdf"
+                            href="/pdf/2022.pdf"
                             target="_blank"
                         >
                             第1期（2022年度）貸借対照表
@@ -26,7 +26,7 @@ export const Ir: FC = () => {
                             variant="background-text"
                             bgText="Address"
                             boxAsLink={true}
-                            href="./pdf/2023.pdf"
+                            href="/pdf/2023.pdf"
                             target="_blank"
                         >
                             第2期（2023年度）貸借対照表
