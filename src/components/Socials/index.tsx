@@ -8,7 +8,7 @@ export const Socials: FC = ({ ...rest }) => {
             <S.SocialsList>
                 <S.SocialsListItem>
                     <S.SocialsLink
-                        href="./company-info"
+                        href="/company-info"
                         target="_self"
                         rel="noreferrer"
                     >
@@ -18,7 +18,7 @@ export const Socials: FC = ({ ...rest }) => {
                 </S.SocialsListItem>
                 <S.SocialsListItem>
                     <S.SocialsLink
-                        href="./legal-notice"
+                        href="/legal-notice"
                         target="_self"
                         rel="noreferrer"
                     >
@@ -28,7 +28,7 @@ export const Socials: FC = ({ ...rest }) => {
                 </S.SocialsListItem>
                 <S.SocialsListItem>
                     <S.SocialsLink
-                        href="./privacy"
+                        href="/privacy"
                         target="_self"
                         rel="noreferrer"
                     >
@@ -38,7 +38,7 @@ export const Socials: FC = ({ ...rest }) => {
                 </S.SocialsListItem>
                 <S.SocialsListItem>
                     <S.SocialsLink
-                        href="./ir"
+                        href="/ir"
                         target="_self"
                         rel="noreferrer"
                     >
@@ -48,7 +48,7 @@ export const Socials: FC = ({ ...rest }) => {
                 </S.SocialsListItem>
                 <S.SocialsListItem>
                     <S.SocialsLink
-                        href="./contact"
+                        href="/contact"
                         target="_self"
                         rel="noreferrer"
                     >
